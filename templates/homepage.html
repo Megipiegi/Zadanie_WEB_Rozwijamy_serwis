@@ -8,8 +8,8 @@
         <p class="lead">Znajdziesz tutaj tylko najlepsze tytuły!</p>
         <div class="col-lg-12 mb-4">
         {% for list in list_of_movies %}            
-            <a href="{{ url_for('homepage', list_type=list) }}" class="btn btn-outline-info active" data-toggle="button" role="button" aria-pressed="true">{{ list.capitalize().replace("_", " ") }}</a>
-        {% endfor %}
+            <a href="{{ url_for('homepage', list_type=list) }}" <button type="button" class="btn btn-outline-info"> {{ list.capitalize().replace("_", " ") }}</a>
+         {% endfor %}
         </div>
     </div>
     {% for movie in movies %}

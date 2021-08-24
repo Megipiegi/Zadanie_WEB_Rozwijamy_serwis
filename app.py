@@ -31,3 +31,4 @@ def movie_details(movie_id):
     details = get_single_movie(movie_id)
     cast = get_single_movie_cast(movie_id)
     return render_template("movie_details.html", movie=details, cast=cast)
+
