@@ -7,9 +7,17 @@
         <h1 class="mt-5">Witaj w mojej bibliotece filmów</h1>
         <p class="lead">Znajdziesz tutaj tylko najlepsze tytuły!</p>
         <div class="col-lg-12 mb-4">
-        {% for list in list_of_movies %}            
-            <a href="{{ url_for('homepage', list_type=list) }}" <button type="button" class="btn btn-outline-info"> {{ list.capitalize().replace("_", " ") }}</a>
-         {% endfor %}
+        {% for list in list_of_movies %}
+            <a href= " {{ url_for('homepage', list_type=list) }}" 
+        {% if current_list == list %}
+                class="btn btn-outline-info active"
+            {% else %}
+                class="btn btn-outline-info"
+            {% endif %}
+            >
+            {{ list.capitalize().replace("_", " ") }}
+            </a>
+        {% endfor %}
         </div>
     </div>
     {% for movie in movies %}
